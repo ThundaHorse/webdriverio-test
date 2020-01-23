@@ -1,0 +1,7 @@
+node_modules
+
+geckodriver
+
+selenium-server-standalone-*
+
+wdio.conf
