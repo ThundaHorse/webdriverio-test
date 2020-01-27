@@ -2,15 +2,20 @@ const assert = require("assert");
 
 describe("Wizard footer link tests", () => {
   beforeEach(async function() {
-    const url = "https://cwl.orcaconnect.com";
+    const url = "https://cwl.conversionwhale.com";
     await browser.url(url);
+    const title = await browser.getTitle();
+    assert(
+      title,
+      "Conversion Whale | A Result Driven Marketing Company Exclusively For The Dental Industry"
+    );
   });
 
   it("should direct service link link to service page", async () => {
     let serviceLink = await $("a=Services");
     assert(
       serviceLink.getAttribute("href"),
-      "https://cwl.orcaconnect.com/services"
+      "https://cwl.conversionwhale.com/services"
     );
   });
 
@@ -18,7 +23,7 @@ describe("Wizard footer link tests", () => {
     let digMarkLink = await $("a=Digital Marketing");
     assert(
       digMarkLink.getAttribute("href"),
-      "https://conversionwhale.com/digital-marketing"
+      "https://cwl.conversionwhale.com/digital-marketing"
     );
   });
 
@@ -26,7 +31,7 @@ describe("Wizard footer link tests", () => {
     let directMailLink = await $("a=Direct Mail");
     assert(
       directMailLink.getAttribute("href"),
-      "https://conversionwhale.com/direct-mail"
+      "https://cwl.conversionwhale.com/direct-mail"
     );
   });
 
@@ -34,7 +39,7 @@ describe("Wizard footer link tests", () => {
     let servicePackageLink = await $("a=Service Packages");
     assert(
       servicePackageLink.getAttribute("href"),
-      "https://conversionwhale.com/packages"
+      "https://cwl.conversionwhale.com/packages"
     );
   });
 
@@ -42,7 +47,7 @@ describe("Wizard footer link tests", () => {
     let techLink = await $("a=Technology");
     assert(
       techLink.getAttribute("href"),
-      "https://conversionwhale.com/technology"
+      "https://cwl.conversionwhale.com/technology"
     );
   });
 
@@ -50,7 +55,7 @@ describe("Wizard footer link tests", () => {
     let orca = await $("a=ORCA Platform");
     assert(
       orca.getAttribute("href"),
-      "https://conversionwhale.com/orca-platform"
+      "https://cwl.conversionwhale.com/orca-platform"
     );
   });
 
@@ -58,7 +63,7 @@ describe("Wizard footer link tests", () => {
     let virtAs = await $("a=Virtual Assistant");
     assert(
       virtAs.getAttribute("href"),
-      "https://conversionwhale.com/virtual-assistant"
+      "https://cwl.conversionwhale.com/virtual-assistant"
     );
   });
 
@@ -66,7 +71,7 @@ describe("Wizard footer link tests", () => {
     let callAs = await $("a=Call Analysis");
     assert(
       callAs.getAttribute("href"),
-      "https://conversionwhale.com/call-analysis"
+      "https://cwl.conversionwhale.com/call-analysis"
     );
   });
 
@@ -74,7 +79,7 @@ describe("Wizard footer link tests", () => {
     let locTar = await $("a=Location Targeting");
     assert(
       locTar.getAttribute("href"),
-      "https://conversionwhale.com/location-targeting"
+      "https://cwl.conversionwhale.com/location-targeting"
     );
   });
 
@@ -82,7 +87,7 @@ describe("Wizard footer link tests", () => {
     let testimonial = await $("a=Testimonials");
     assert(
       testimonial.getAttribute("href"),
-      "https://conversionwhale.com/testimonials/"
+      "https://cwl.conversionwhale.com/testimonials/"
     );
   });
 
@@ -90,7 +95,7 @@ describe("Wizard footer link tests", () => {
     let sucSt = await $("a=Case Studies");
     assert(
       sucSt.getAttribute("href"),
-      "https://conversionwhale.com/case-studies"
+      "https://cwl.conversionwhale.com/case-studies"
     );
   });
 
@@ -98,13 +103,13 @@ describe("Wizard footer link tests", () => {
     let ourStory = await $("a=Our Story");
     assert(
       ourStory.getAttribute("href"),
-      "https://conversionwhale.com/company"
+      "https://cwl.conversionwhale.com/company"
     );
   });
 
   it("should route our team link to team page", async () => {
     let team = await $("a=Our Team");
-    assert(team.getAttribute("href"), "https://conversionwhale.com/pod");
+    assert(team.getAttribute("href"), "https://cwl.conversionwhale.com/pod");
   });
 
   it("should route news and updates link to blog page", async () => {
@@ -124,7 +129,7 @@ describe("Wizard footer link tests", () => {
     let contact = await $("a=Contact Us");
     assert(
       contact.getAttribute("href"),
-      "https://conversionwhale.com/contact-us"
+      "https://cwl.conversionwhale.com/contact-us"
     );
   });
 
